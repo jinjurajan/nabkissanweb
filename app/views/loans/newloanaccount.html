@@ -173,11 +173,11 @@
                     <select id="repaymentFrequencyNthDayType" class="form-control" ng-model="formData.repaymentFrequencyNthDayType"
                             ng-options="repaymentFrequencyNthDayType.id as repaymentFrequencyNthDayType.value for repaymentFrequencyNthDayType in loanaccountinfo.repaymentFrequencyNthDayTypeOptions"
                             ng-show="formData.repaymentFrequencyType == 2"
-                            value="{{repaymentFrequencyNthDayType.id}}"/>&nbsp;
+                            value="{{repaymentFrequencyNthDayType.id}}"><option value=""></option></select>&nbsp;
                     <select id="repaymentFrequencyDayOfWeekType" class="form-control" ng-model="formData.repaymentFrequencyDayOfWeekType"
                             ng-options="repaymentFrequencyDayOfWeekType.id as repaymentFrequencyDayOfWeekType.value for repaymentFrequencyDayOfWeekType in loanaccountinfo.repaymentFrequencyDaysOfWeekTypeOptions"
                             ng-show="formData.repaymentFrequencyType == 2"
-                            value="{{repaymentFrequencyDayOfWeekType.id}}"/>&nbsp;
+                            value="{{repaymentFrequencyDayOfWeekType.id}}"><option value=""></option></select>&nbsp;
                         
                     <form-validate valattributeform="newloanaccountform" valattribute="repaidevery"/>
                 </td>
@@ -361,14 +361,14 @@
                     <label>{{ loanaccountinfo.interestRecalculationData.recalculationRestFrequencyInterval}}</label>
                 </td>
 
-                <td ng-hide="response.uiDisplayConfigurations.loanAccount.isHiddenSection.interestRecalculationSection == true">
+                <!--<td ng-hide="response.uiDisplayConfigurations.loanAccount.isHiddenSection.interestRecalculationSection == true">
                     <label class="control-label">{{ 'label.input.frequenc.date.for.recalculte.outstanding.principal' |
                         translate }}<span class="required">*</span></label>
                 </td>
                 <td class="paddedbottom10" ng-hide="response.uiDisplayConfigurations.loanAccount.isHiddenSection.interestRecalculationSection == true">
                     <input type="text" id="recalculationRestFrequencyDate" name="recalculationRestFrequencyDate" datepicker-pop="dd MMMM yyyy"
                            ng-model="date.recalculationRestFrequencyDate" is-open="opened" min="'2000-01-01'" max="restrictDate" class="form-control"/>
-                </td>
+                </td>-->
             </tr>
             <tr data-ng-show="loanaccountinfo.isInterestRecalculationEnabled  && loanaccountinfo.interestRecalculationData.interestRecalculationCompoundingType.id != 0">
                 <td ng-hide="response.uiDisplayConfigurations.loanAccount.isHiddenSection.interestRecalculationSection == true">
@@ -387,14 +387,14 @@
                     <label>{{ loanaccountinfo.interestRecalculationData.recalculationCompoundingFrequencyInterval}}</label>
                 </td>
 
-                <td ng-hide="response.uiDisplayConfigurations.loanAccount.isHiddenSection.interestRecalculationSection == true">
+                <!--<td ng-hide="response.uiDisplayConfigurations.loanAccount.isHiddenSection.interestRecalculationSection == true">
                     <label class="control-label">{{ 'label.input.frequenc.date.for.compounding' |
                         translate }}<span class="required">*</span></label>
                 </td>
                 <td class="paddedbottom10" ng-hide="response.uiDisplayConfigurations.loanAccount.isHiddenSection.interestRecalculationSection == true">
                     <input type="text" id="recalculationCompoundingFrequencyDate" name="recalculationCompoundingFrequencyDate" datepicker-pop="dd MMMM yyyy"
                            ng-model="date.recalculationCompoundingFrequencyDate" is-open="opened" min="'2000-01-01'" max="restrictDate" class="form-control"/>
-                </td>
+                </td>-->
             </tr>
 
         </table>

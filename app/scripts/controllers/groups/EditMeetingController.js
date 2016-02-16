@@ -38,6 +38,9 @@
                 //update radio button option
                 if (scope.formData.frequency == 2) {
                     scope.formData.repeatsOnDay = scope.calendarData.repeatsOnDay.id;
+                } else if (scope.formData.frequency == 3) {
+                    scope.formData.repeatsOnNthDayOfMonth = scope.calendarData.repeatsOnNthDayOfMonth.id;
+                    scope.formData.repeatsOnLastWeekdayOfMonth = scope.calendarData.repeatsOnDay.id;
                 }
             });
 
@@ -63,6 +66,22 @@
                 if (period == 3) {
                     scope.periodValue = "month(s)";
                     scope.repeatsEveryOptions = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"];
+                    scope.frequencyNthDayOptions = [
+                        {id: 1, value: "first"},
+                        {id: 2, value: "second"},
+                        {id: 3, value: "third"},
+                        {id: 4, value: "fourth"},
+                        {id: -1, value: "last"}
+                    ];
+                    scope.frequencyDayOfWeekOptions = [
+                        {name: "MON", value: 1},
+                        {name: "TUE", value: 2},
+                        {name: "WED", value: 3},
+                        {name: "THU", value: 4},
+                        {name: "FRI", value: 5},
+                        {name: "SAT", value: 6},
+                        {name: "SUN", value: 7}
+                    ];
                 }
                 if (period == 4) {
                     scope.periodValue = "year(s)";
