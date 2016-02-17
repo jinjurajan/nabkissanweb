@@ -19,6 +19,7 @@
                 }
                 ;
             };
+            scope.hideTransactionDetails = false;
 
             /***
              * we are using orderBy(https://docs.angularjs.org/api/ng/filter/orderBy) filter to sort fields in ui
@@ -369,6 +370,7 @@
                     }
 
                     if(scope.recalculateInterest){
+                        scope.hideTransactionDetails = scope.loandetails.interestRecalculationData.isCompoundingToBePostedAsTransaction || false;
                         scope.buttons.singlebuttons.splice(1, 0, {
                             name: "button.prepayment",
                             icon: "icon-money",

@@ -2903,6 +2903,7 @@
     "label.input.frequenc.interval.for.recalculte.outstanding.principal":"Frequency Interval for recalculation",
     "label.input.frequenc.date.for.recalculte.outstanding.principal":"Frequency Date for recalculation",
     "label.input.frequency.for.compounding":"Frequency for compounding",
+    "label.input.compounding.posted.as.interest":"Is compounding to be posted as interest",
     "label.input.frequenc.interval.for.compounding":"Frequency Interval for compounding",
     "label.input.frequenc.date.for.compounding":"Frequency Date for compounding",
     "label.input.variable.installments.allowed":"Variable Installments Allowed",

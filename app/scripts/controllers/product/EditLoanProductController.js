@@ -128,6 +128,9 @@
                                 scope.formData.recalculationCompoundingFrequencyDayOfWeekType = scope.product.interestRecalculationData.recalculationCompoundingFrequencyWeekday.id;
                         }
                     }
+                    if (scope.product.interestRecalculationData.isCompoundingToBePostedAsTransaction) {
+                        scope.formData.isCompoundingToBePostedAsTransaction = scope.product.interestRecalculationData.isCompoundingToBePostedAsTransaction;
+                    }
 
                 }
                 if(scope.product.allowAttributeOverrides != null){
