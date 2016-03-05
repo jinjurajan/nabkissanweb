@@ -68,7 +68,7 @@
     <div class="col-sm-9 col-md-9">
         <div ng-show="collectionsheetdata"
              style="float:left; max-width:800px; min-width:600px; overflow-x:auto!important; white-space:nowrap;">
-            <table class="table table-bordered">
+            <table class="table table-bordered" width="100%">
                 <thead>
                 <tr>
                     <th class="highlightcol" scope="colgroup"
@@ -93,10 +93,11 @@
                     <td>{{client.clientName}}({{client.clientId}})</td>
                     <td>
                         <input id="loantotal" type="text" class="input-sm form-control"
-                               ng-model="loan.totalDue">
+                               number-format ng-model="loan.totalDue">
                     </td>
                     <td>
-                        <input type="text" class="input-sm form-control" ng-model="loan.chargesDue">
+                        <input type="text" class="input-sm form-control" number-format
+                               ng-model="loan.chargesDue">
                     </td>
                     <td>
                         <button class="btn btn-default" ng-show="!loan.showPaymentDetails"
